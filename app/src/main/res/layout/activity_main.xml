@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/clock"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dateCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set date"
+            android:padding="10dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/dateCardView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/timeCardView">
+        <TextView
+            android:id="@+id/tvtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set time"
+            android:padding="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSet"
+        android:layout_width="155dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/buttonColor"
+        android:text="Set"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeCardView" />
+
+    <Button
+        android:id="@+id/btnCancle"
+        android:layout_width="155dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:background="#F10F0F"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btnSet"
+        app:layout_constraintTop_toBottomOf="@+id/timeCardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
